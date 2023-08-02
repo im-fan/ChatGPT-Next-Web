@@ -913,6 +913,7 @@ export function Settings() {
                 title={Locale.Settings.Access.CustomEndpoint.Title}
                 subTitle={Locale.Settings.Access.CustomEndpoint.SubTitle}
               >
+                  {/*placeholder="https://api.chatanywhere.cn/"*/}
                 <input
                   type="checkbox"
                   checked={accessStore.useCustomConfig}
