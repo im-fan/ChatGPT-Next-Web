@@ -4,6 +4,13 @@ import { DEFAULT_MODELS, OPENAI_BASE_URL } from "../constant";
 import { collectModelTable } from "../utils/model";
 import { makeAzurePath } from "../azure";
 
+// TODO  "api.openai.com";
+// export const OPENAI_URL = "api.chatanywhere.cn";
+//
+// const DEFAULT_PROTOCOL = "https";
+// const PROTOCOL = process.env.PROTOCOL || DEFAULT_PROTOCOL;
+// const BASE_URL = process.env.BASE_URL || OPENAI_URL;
+// const DISABLE_GPT4 = !!process.env.DISABLE_GPT4;
 const serverConfig = getServerSideConfig();
 
 export async function requestOpenai(req: NextRequest) {
