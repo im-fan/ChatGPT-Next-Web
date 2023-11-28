@@ -57,6 +57,7 @@ export async function requestOpenai(req: NextRequest) {
   }
 
   const fetchUrl = `${baseUrl}/${path}`;
+  console.log("[fetchUrl]", fetchUrl);
   const fetchOptions: RequestInit = {
     headers: {
       "Content-Type": "application/json",
