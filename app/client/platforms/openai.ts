@@ -148,6 +148,7 @@ export class ChatGPTApi implements LLMApi {
         };
 
         controller.signal.onabort = finish;
+        console.log("[chatPath]", chatPath);
 
         fetchEventSource(chatPath, {
           ...chatPayload,

@@ -56,12 +56,14 @@ export async function requestOpenai(req: NextRequest) {
     path = makeAzurePath(path, serverConfig.azureApiVersion);
   }
 
+  const refererUrl = `${baseUrl}`;
   const fetchUrl = `${baseUrl}/${path}`;
   console.log("[fetchUrl]", fetchUrl);
   const fetchOptions: RequestInit = {
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "no-store",
+      referer: refererUrl,
       [authHeaderName]: authValue,
       ...(serverConfig.openaiOrgId && {
         "OpenAI-Organization": serverConfig.openaiOrgId,
